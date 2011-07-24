@@ -1,6 +1,7 @@
 #!/usr/bin/env python2
 from twisted.internet.protocol import Protocol, Factory
 from twisted.internet.endpoints import *
+from twisted.internet import reactor
 
 class QOTD(Protocol):
 
