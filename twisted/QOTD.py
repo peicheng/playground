@@ -6,12 +6,15 @@ from twisted.internet import reactor
 class QOTD(Protocol):
 
     def connectionMade(self):
-        self.transport.write("An apple a day keeps the doctor away\r\n")
+        self.transport.write(self.factory.quote + '\r\n')
         self.transport.loseConnection()
 
-factory = Factory()
-factory.protocol = QOTD
+class QOTDFactory(Factory):
 
-endpoint = TCP4ServerEndpoint(reactor, 8007)
-endpoint.listen(factory)
+    protocol = QOTD
+
+    def __init__(self, quote = None):
+        self.quote = quote or "An apple a day keeps the doctor away"
+
+reactor.listenTCP(8007, QOTDFactory("configurable quote"))
 reactor.run()
