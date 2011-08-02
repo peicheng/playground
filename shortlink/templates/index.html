@@ -1,4 +1,4 @@
-$def with ()
+$def with (url)
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,7 +12,12 @@ $def with ()
         <input type="text" name="url" value="" id="url"/>
         <input type="submit" id="submit" value="shorten" />
       </form>
+
+      <div class="clear"></div>
+      $if url:
+      <div class="result">
+        $url
+      </div>
     </div>
-    <div class="clear"></div>
   </body>
 </html>

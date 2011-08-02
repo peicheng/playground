@@ -43,4 +43,19 @@ input {
 
 #submit:hover {  
     background:#ff7866;  
-}  
+}
+
+clear {
+    height:1px;  
+    width:400px;  
+    clear:both;  
+}
+
+.result {
+    clear: both;
+    width: 400px;
+    margin: 20px auto 0px auto;
+    border-top:2px solid #ff4b33;
+    padding-top:12px;
+    text-align: center;
+}
