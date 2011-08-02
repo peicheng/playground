@@ -11,7 +11,7 @@ app = web.application(urls, globals())
 
 class index:
     def GET(self):
-        todos = db.select('todo');
+        todos = db.select('todo')
         return render.index(todos)
 
 class add:
