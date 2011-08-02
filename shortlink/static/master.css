@@ -16,3 +16,31 @@ h1 {
     padding-bottom: 8px;
     border-bottom:2px solid #ff4b33;
 }
+
+form {
+    display: block;
+    width: 400px;
+}
+
+input {
+    display: block;
+    float: left;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#url {
+    width: 280px;
+    margin-right: 12px;
+}
+
+#submit {
+    width: 80px;
+    border: none;
+    background:#ff4b33;  
+    padding:10px;
+}
+
+#submit:hover {  
+    background:#ff7866;  
+}  
