@@ -9,7 +9,8 @@ $def with (url)
 
   <body>
     <div class="container">
-      <h1>Short Link App</h1>
+      
+      <a href="/" id="logo">Short Link App</a>
       <form method="POST" id="" action="shorten">
         <input type="text" name="url" value="" id="url"/>
         <input type="submit" id="submit" value="shorten" />
@@ -18,7 +19,7 @@ $def with (url)
       <div class="clear"></div>
       $if url:
       <div class="result">
-        $url
+        <a href="$url">$url</a>
       </div>
     </div>
   </body>

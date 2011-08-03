@@ -7,18 +7,19 @@ body {
     margin: 120px auto 0px auto;
 }
 
-h1 {
+#logo {
     width: 400px;
-    margin-bottom: 12px;
+    margin:0px auto 12px auto;
     text-align: center;
     color: #ff4b33;
-    font-size: 40px;
+    font-size: 46px;
     padding-bottom: 8px;
-    border-bottom:2px solid #ff4b33;
     font-family: 'Kelly Slab', cursive;
+    text-decoration: none;
 }
 
 form {
+    margin-top: 10px;
     display: block;
     width: 400px;
 }
@@ -39,11 +40,13 @@ input {
     width: 80px;
     border: none;
     background:#ff4b33;  
-    
+    border-radius: 20px 20px 20px 20px;
+    color: #ffffff;
 }
 
 #submit:hover {  
-    background:#ff7866;  
+    background:#ff7866;
+    box-shadow: 1px 2px 1px #CCCCCC;
 }
 
 clear {
@@ -55,8 +58,17 @@ clear {
 .result {
     clear: both;
     width: 400px;
-    margin: 65px auto 0px auto;
+    margin: 70px auto 0px auto;
     border-top:2px solid #ff4b33;
     padding-top:12px;
     text-align: center;
 }
+
+.result a {  
+    font-size:24px;  
+    display:block;  
+    margin-top:8px;  
+    color:#ff2d11;  
+    background:#ffd2cc;  
+    padding:8px;  
+} 
