@@ -6,7 +6,7 @@ import redis
 render = web.template.render('templates/')
 urls = (
     '/', 'index',
-    '/shorten', 'shorten',
+    '/(.*)', 'redirect',
 )
 
 app = web.application(urls, globals())
@@ -16,8 +16,7 @@ r= redis.Redis(host='localhost', port=6379, db=0)
 class index:
     def GET(self):
         return render.index(None, None)
-
-class shorten:
+    
     def POST(self):
         i = web.input()
         url = i.url
@@ -30,6 +29,12 @@ class shorten:
                     break
             r.set("shortcode:%s" % url, shortcode)
         return render.index(url=url, shortcode=shortcode)
+
+class redirect:
+    def GET(self, shortcode):
+        return render.index(url=None, shortcode=shortcode)
+
+application = app.wsgifunc()
 
 if __name__ == "__main__":
     app.run()
