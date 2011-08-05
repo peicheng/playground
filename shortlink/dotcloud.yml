@@ -1,6 +1,5 @@
 www:
   type: python
-  approot: .
 
 data:
   type: redis

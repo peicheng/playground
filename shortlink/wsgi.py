@@ -11,7 +11,7 @@ urls = (
 
 app = web.application(urls, globals())
 
-r= redis.Redis(host='localhost', port=6379, db=0)
+r= redis.Redis(host='d6d77854.dotcloud.com', port=8603, password="6Mb3Y1IzxFaqmjM0CB4k", db=0)
 
 class index:
     def GET(self):
