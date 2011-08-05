@@ -1,4 +1,4 @@
-$def with (url, shortcode)
+$def with (url, shortcode, err=None)
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,12 +15,16 @@ $def with (url, shortcode)
         <input type="text" name="url" value="$url" id="url"/>
         <input type="submit" id="submit" value="shorten" />
       </form>
-
-      <div class="clear"></div>
-      $if url:
-      <div class="result">
-        <a href="$shortcode">http://shortlink.com/$shortcode</a>
-      </div>
+        <div class="clear"></div>
+        $if err:
+          <div class="result">
+            $err
+          </div>
+        $else:
+          $if url:
+            <div class="result">
+              <a href="$shortcode">http://shortlink.com/$shortcode</a>
+            </div>
     </div>
   </body>
 </html>

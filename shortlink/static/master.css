@@ -34,6 +34,7 @@ input {
 #url {
     width: 280px;
     margin-right: 12px;
+    border: 1px solid #96A6C5;
 }
 
 #submit {
@@ -46,7 +47,7 @@ input {
 
 #submit:hover {  
     background:#ff7866;
-    box-shadow: 1px 2px 1px #CCCCCC;
+    box-shadow: 1px 2px 3px #CCCCCC;
 }
 
 clear {
