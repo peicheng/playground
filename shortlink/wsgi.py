@@ -26,13 +26,14 @@ class index:
             return render.index(url=None, shortcode=None, err="error")
         else:
             shortcode = r.get("shortcode:%s" % url)
+            print 'shortcode:%s' % shortcode
             if shortcode == None:
                 while True:
                     shortcode = ''.join(random.choice(string.letters + string.digits) for x in range(6))
                     if r.get("url:%s" % shortcode) == None:
                         r.set("url:%s" % shortcode, url)
+                        r.set("shortcode:%s" % url, shortcode)
                         break
-                    r.set("shortcode:%s" % url, shortcode)
             return render.index(url=url, shortcode=shortcode)
 
 class redirect:
