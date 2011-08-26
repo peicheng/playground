@@ -5,8 +5,5 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
-def gcd_m(l):
-    return reduce(gcd, l)
-
 if __name__ == '__main__':
-    print gcd_m(range(1, 10))
+    print reduce((lambda x, y: x * y/ gcd(x, y)), range(1,11))
