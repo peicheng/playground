@@ -26,6 +26,7 @@ def factors_gen():
 
         p += 1
 
+
 def f(no):
     ndivs = {}
     ndivs[0] = 0
