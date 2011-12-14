@@ -12,7 +12,6 @@ def prime(n):
                 return i
             for j in xrange(i * 2, a.length(), i):
                 a[j] = False
-            
 
 
 if __name__ == '__main__':
